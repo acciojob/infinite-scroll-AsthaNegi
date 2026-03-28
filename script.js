@@ -1,21 +1,21 @@
+const list=document.querySelector("#infi-list");
 
-
-const list=document.getElementById("infi-list");
 let count=1;
 
-function addItems(num){
- for(let i=0;i<num;i++){
-    const listItem=document.createElement("li");  
-    listItem.textContent=`Item ${count++}`;
-    list.appendChild(listItem);
- }   
+function addItems(n){
+	
+for(let i=0;i<n;i++){
+   const li=document.createElement("li");
+   li.textContent=`Item ${count++} `;
+   list.appendChild(li);
 }
 
+}
 addItems(10);
 
 window.addEventListener("scroll",()=>{
-    if(window.innerHeight+window.scrollY>=document.body.offsetHeight){
-        
-       addItems(2); 
-    }
+      if(window.innerHeight+window.scrollY
+       >=document.body.offSetHeight){
+           addItems(2);
+       }
 });
